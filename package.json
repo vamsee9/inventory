@@ -1,0 +1,32 @@
+{
+  "name": "inventory-backend",
+  "version": "1.0.0",
+  "description": "stock",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "install:client": "npm install --prefix client",
+    "watch:sass": "npm run watch:sass --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run watch:sass\""
+  },
+  "author": "vamsi krishna",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.13.4",
+    "nodemon": "^2.0.12",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^23.0.1"
+  }
+}
