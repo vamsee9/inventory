@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import filterFactory, { numberFilter } from 'react-bootstrap-table2-filter';
 import { getProducts } from '../../actions/productActions'
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-
 import Product from './Product';
 
 
@@ -28,9 +25,7 @@ const Table = () => {
                         <th scope="col">Total Price</th>
                         <th scope="col">Description</th>
                         <th scope="col">Operations</th>
-
-                        <TableHeaderColumn dataField='stock' dataSort={true} isKey>Remark</TableHeaderColumn>
-
+                        <th scope="col">Remark</th>
                     </tr>
                 </thead>
                 <tbody>

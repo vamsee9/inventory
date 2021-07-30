@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: ["http://localhhost:3000"],
+    origin: ["https://inventory-sooty.vercel.app:3000" || "https://inventory-git-master-vamsee9.vercel.app:3000" || "https://inventory-vamsee9.vercel.app:3000"||"http://localhost:3000"],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
