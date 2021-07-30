@@ -30,7 +30,6 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {console.log(products)}
                     {products.length > 0 ? (products.map((product, index) => {
                         return <Product key={product._id} product={product} index={index} />
                     })) : (<tr><th className="table-active">No Products</th></tr>)}

@@ -10,7 +10,18 @@ export default class Home extends Component {
                 <main className='homepage'>
                     <h1 className='homepage__heading'>
                         Inventory Management System - (IMS)
-                    </h1>
+                    </h1><br/>
+                    <h4>
+                        <li>
+                            Adding Inventory Item
+                        </li>
+                        <li>
+                            editing of the Inventory item
+                        </li>
+                        <li>
+                            deletion of Inventory Item
+                        </li>
+                    </h4>
                     <Link className="homepage__cta" to="/dashboard">dashboard</Link>
                 </main>
             </React.Fragment>
