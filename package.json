@@ -8,10 +8,10 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "install:client": "npm install --prefix client",
-    "watch:sass": "npm run watch:sass --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run watch:sass\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
-    "build": "npm install --prefix client && npm run build --prefix client"
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "test": "cd client/ && rm -rf build/ node_modules/ && yarn install && cd .. && yarn build && npm install -g serve && serve -s build"
   },
   "author": "vamsi krishna",
   "license": "ISC",
