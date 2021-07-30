@@ -4,6 +4,7 @@
   "description": "stock",
   "main": "server.js",
   "scripts": {
+    "build": "cd client && react-scripts build",
     "test": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
