@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../actions/productActions'
@@ -21,7 +22,7 @@ const AddProduct = () => {
   };
 
   const handleSubmit = (e) => {
-
+    e.preventDefault( )
     setNewProduct({
       name: '',
       qty: 0,
@@ -31,6 +32,7 @@ const AddProduct = () => {
     })
 
     dispatch(addProduct(newProduct))
+    //axios.post("http://localhost:5000/api/products/add", newProduct)
   }
 
   const { name, qty, um, price, description } = newProduct

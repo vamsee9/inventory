@@ -14,9 +14,7 @@ const keys = require('./config/keys');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-    origin: ["https://inventory-sooty.vercel.app:3000" || "https://inventory-git-master-vamsee9.vercel.app:3000" || "https://inventory-vamsee9.vercel.app:3000"||"http://localhost:3000"],
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
@@ -28,8 +26,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 2,
     }
 }));
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 const uri = keys.mongoURI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
@@ -55,6 +52,6 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port: 5000`);
 })
