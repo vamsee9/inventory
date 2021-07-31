@@ -29,10 +29,11 @@ const AddProduct = () => {
       price: 0,
       description: '',
     })
-
     dispatch(addProduct(newProduct))
     //axios.post("http://localhost:5000/api/products/add", newProduct)
   }
+
+ 
 
   const { name, qty, um, price, description } = newProduct
 
@@ -66,7 +67,8 @@ const AddProduct = () => {
             <input type="number" className="form-control" name="price" placeholder="Price" value={price} onChange={e => handleChange(e)} />
           </div>
         </div>
-        <input type="submit" className="btn btn-primary" value="Add Product" />
+        <input type="submit" className="btn btn-primary mr-2" value="Add Product" />
+        
       </form>
     </div>
   )

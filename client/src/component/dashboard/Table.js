@@ -8,13 +8,20 @@ const Table = () => {
     const products = useSelector(state => state.product.products)
     const dispatch = useDispatch()
 
+    const sortBy = (e) => {
+      products.sort(Product.qty)
+    }
+
     useEffect(() => {
         dispatch(getProducts())
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
         <div>
+
+            <button className="btn btn-primary" value="sort stock" onClick={e => sortBy(e)}>Sort by low stock</button>
+            <br/><br/>
             <table className="table table-striped">
                 <thead>
                     <tr>

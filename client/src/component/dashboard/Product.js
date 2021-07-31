@@ -9,6 +9,7 @@ const Product = ({ product, index }) => {
     const stock = 'stock is low'
 
     return (
+
         <tr>
             <th scope="row">{index + 1}</th>
             <td>{product.name}</td>
